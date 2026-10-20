@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="https://www.facebook.com/diaaawady/">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuq5n7an_el7yvXKntBMgqZpWFSH-zzF1LJJ8xepF4WWbFjziHdBJg-vI&s=10">
+</a> 
+
+  <h1 id="my-text">I love netham al tayebat</h1>
+
+<button type="button" onclick="readText()">🔊 Read Aloud</button>
+
+<script>
+  function readText() {
+    // Get the text from the element
+    const text = document.getElementById("my-text").innerText;
+
+    // Create a new SpeechSynthesisUtterance object
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Optional: Set voice language (e.g., 'en-US')
+    utterance.lang = "en-US";
+
+    // Cancel any ongoing speech and speak the text
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+  }
+</script>
+    <p>i love Dr Diaa Al Awady </p>
+</body>
+</html>
